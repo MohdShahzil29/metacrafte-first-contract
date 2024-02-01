@@ -13,7 +13,7 @@ Welcome to the Pub Contract Challenge! This Move language smart contract deploys
 ## Add a Bike
 Use the provided transaction to add a new bike. Simply input the model, year, and owner.
 
-# Read Bike Information
+## Read Bike Information
 Run the script to retrieve information about a bike using the owner's address.
 Get started and have fun with the Pub Contract Challenge!
 
