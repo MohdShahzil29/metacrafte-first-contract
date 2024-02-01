@@ -1,42 +1,33 @@
-pub contract EmployeeInfo {
-
-    pub var employees: {String: EmployeeItem}
-
-    init() {
-        self.employees = {}
-    }
-
-    pub struct EmployeeItem {
-    pub var employeeId: String
-        pub var firstName: String
-        pub var lastName: String
-        pub var createdDate: UInt
-        pub var team: String
-        pub var jobRole: String
-
-        init(_employeeId: String,_firstName: String,_lastName: String, _createdDate: UInt, _team: String, _jobRole: String) {
-            self.employeeId = _employeeId
-            self.firstName = _firstName
-            self.lastName = _lastName
-            self.createdDate = _createdDate
-            self.team = _team
-            self.jobRole = _jobRole
-        }
-    }
-
-    pub fun createEmployee(employeeId: String,firstName: String,lastName: String, createdDate: UInt, team: String, jobRole: String) {
-        let newEmployeeItem = EmployeeItem(
-            _employeeId: employeeId,
-            _firstName: firstName,
-            _lastName: lastName,
-            _createdDate: createdDate,
-            _team: team,
-            _jobRole: jobRole
-        )
-        self.employees[employeeId] = newEmployeeItem
-    }
-
-    pub fun getEmployee(employeeId: String): EmployeeItem {
-        return self.employees[employeeId]!
+pub contract challenge
+{
+pub var bikes: {Address:bike}
+//
+//Deploy a new contract that has a Struct of your choosing inside of it.
+//
+  pub struct bike 
+  {
+    pub let model: String
+    pub let year: UInt
+    pub let owner: Address
+  
+    init(_model: String, _year: UInt, _owner: Address)
+     {
+        self.model = _model
+        self.year = _year
+        self.owner = _owner
+     }
+  } 
+  //
+  //Create a function to add to that array/dictionary.
+  //
+  pub fun bikeone(model: String, year: UInt, owner: Address)
+  {
+      let biketwo =bike(_model: model, _year: year, _owner: owner)
+      self.bikes[owner]=biketwo
+  }
+   init() {
+        self.bikes = {}
     }
 }
+    
+  
